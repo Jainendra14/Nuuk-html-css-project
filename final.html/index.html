@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Dosis', sans-serif;
+        /* background-color: #fff; */
+
+
+    }
+
+    header {
+        background-image: url("./image/slide-2.jpg");
+        height: 80%;
+        width: 98%;
+        margin: 0px 1%;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: fixed;
+
+    }
+
+    .nav {
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        position: relative;
+        top: 10px;
+        left: 10%;
+        right: 0%;
+        height: 80px;
+
+
+    }
+
+    .nav-logo img {
+        background-color: coral;
+        width: 85px;
+        height: 25px;
+        padding: 35px 40px;
+
+    }
+
+    .bar-line {
+        display: none;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 5px;
+
+    }
+
+
+    @media screen and (max-width: 990px) {
+
+        .bar-line {
+            display: block;
+        }
+
+        .nav-list {
+            transform: translate(100%);
+
+        }
+
+        .nav-bar:hover .nav-list {
+            transform: translate(-100%);
+
+
+        }
+
+    }
+
+    @media screen and (min-width:991px) {
+        .nav {
+            position: relative;
+            top: 20px;
+        }
+
+    }
+
+    .nav-list {
+        float: right;
+        margin: 10px;
+        padding: 0px 10px;
+        display: flex;
+
+    }
+
+    .nav-list-item {
+        text-decoration: none;
+
+    }
+
+    .nav-list-item:hover {
+        text-decoration: underline coral;
+    }
+
+    .list {
+        padding: 20px 8px;
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .list-button {
+        background-color: coral;
+        padding: 30px 30px;
+        color: #fff;
+        position: relative;
+        bottom: 10px;
+        left: 20px;
+
+
+    }
+
+    .nav-disc {
+        position: relative;
+        top: 125px;
+        left: 150px;
+
+    }
+
+    .nav-disc h1 {
+        font-size: 55px;
+        text-transform: uppercase;
+        color: #fff;
+
+    }
+
+    .nav-disc p {
+        color: #fff;
+        margin: 15px auto;
+
+    }
+
+    .nav-disc span {
+        color: #fff;
+        font-size: 15px;
+        background-color: coral;
+        padding: 8px 15px;
+        margin-top: 20px;
+    }
+
+    .nav-inco {
+        position: absolute;
+        top: 350px;
+        right: 15px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: #0a1229;
+        margin: px;
+
+    }
+
+    .nav-inco img {
+        background-color: #0a1229;
+        border-bottom: 1px solid white;
+
+        height: 35px;
+        width: 35px;
+        margin: 6px;
+
+
+    }
+
+    .info {
+        position: absolute;
+        top: 500px;
+        right: 15px;
+        background-color: coral;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+
+    }
+
+    .info-container {
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+        margin:30px 90px;
+    }
+
+    .info-container img {
+        height: 25px;
+        width: 25px;
+        margin: 20px;
+
+    }
+
+    .info-type {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .white-para {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .image {
+        /* background-color: lightgray; */
+        overflow: hidden;
+        opacity:1;
+        height: 650px;
+        margin: 15px;
+        /* background-image: url("./image/slide-2.jpg"); */
+        background-attachment: fixed;
+        background-size: cover;
+        background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url("./image/slide-2.jpg");
+
+    }
+
+    .section {
+        background-color: #f7f8fc;
+        margin: 15px;
+
+    }
+
+    .ba-item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .banner {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .heading {
+        position: relative;
+        left: 2%;
+        top: 55px;
+        color: rgba(241, 241, 247, 0.5);
+        font-size: 120px;
+        letter-spacing: 10px;
+    }
+
+    .sup-heading {
+        position: relative;
+        left: 2%;
+        top: 65;
+        font-size: 50px;
+        display: inline-block;
+    }
+
+    .banner-sup-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .heading-para {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 15px;
+        font-weight: bold;
+        color: gray;
+        position: relative;
+        right: 2%;
+        align-items: center;
+    }
+
+    .banner-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        position: relative;
+        left: 15%;
+        top: 50px;
+
+    }
+
+    .banner-img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .banner-heading {
+        font-size: 20px;
+    }
+
+    .banner-p {
+        font-size: 18px;
+        color: gray;
+        width: 80%;
+        margin: 25px 0px;
+    }
+
+    .ba-link {
+        color: gray;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-bottom: 200px;
+    }
+
+    .ba-link:hover {
+        border-bottom: 2px solid coral;
+
+    }
+
+    .about {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        width: 80%;
+        position: relative;
+        left: 15%;
+        top: 40px;
+
+
+
+
+    }
+
+    .about-image img {
+        height: 300px;
+        width: 500px;
+        position: relative;
+        top: 60px;
+
+
+    }
+
+    .about-image {
+        display: flex;
+
+    }
+
+    .about-dis {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 90px;
+
+
+
+
+
+    }
+
+    .about-heading {
+        position: relative;
+        top: 30px;
+        color: rgba(241, 241, 247, 0.5);
+        font-size: 120px;
+        letter-spacing: 10px;
+        left: -8%;
+
+    }
+
+    .about-para {
+        margin: 20px 0px;
+    }
+
+    .about-link {
+        text-decoration: none;
+        color: gray;
+        font-size: 15px;
+    }
+
+    .about-link:hover {
+        text-decoration: underline coral;
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 100px;
+        width: 80%;
+        left: 15%;
+
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-heading {
+        margin-bottom: 10px;
+        color: #e47312;
+        font-size: 60px;
+        font-weight: 500;
+    }
+
+    .text-para {
+        margin-bottom: 100px;
+
+    }
+
+    .card {
+        display: flex;
+        width: 95%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+
+    }
+
+    .card-image {
+        margin: 20px auto;
+
+    }
+
+
+    .card-image img {
+        height: 400px;
+        width: 100%;
+    }
+
+    .card-image img:hover {
+        background-color: rgba(241, 241, 247, 5);
+        cursor: pointer;
+    }
+
+    .card-image:hover .card-dis {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        bottom: 50%;
+        left: 40%;
+
+
+    }
+
+    .card-dis {
+        display: none;
+        background-color: coral;
+        border-radius: 50%;
+        font-size: 18px;
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-banner {
+        color: #fff;
+        /* background-color: rgba(237, 80, 23, 0.7); */
+        padding: 80px;
+        text-align: center;
+        /* background-image: url("./image/banner-2.jpg"); */
+        background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)), url(./image/banner-2.jpg);
+        
+        background-attachment: fixed;
+        background-size:cover ;
+
+
+
+
+    }
+
+    .p-heading {
+        font-size: 30px;
+
+
+
+    }
+
+    .p-para {
+        font-size: 18px;
+        margin: 20px auto;
+
+
+    }
+
+    .p-link {
+        font-size: 15px;
+        color: #fff;
+        text-decoration: none;
+
+    }
+
+    .p-link:hover {
+        border-bottom: 2px solid white;
+    }
+
+    .team {
+        display: flex;
+        width: 80%;
+        margin: 40px auto;
+        flex-wrap: wrap;
+    }
+
+    .t-item {
+        margin: 0px auto;
+
+    }
+
+    .t-container {
+
+        box-sizing: border-box;
+        border: 1px solid white;
+        background-color: white;
+        margin-bottom: 20px;
+
+
+    }
+
+    .t-container img {
+        height: 300px;
+        width: 280px;
+
+    }
+
+    .t-heading {
+        margin: 10px 30px;
+    }
+
+    .t-para {
+        margin: 20px 30px;
+    }
+
+    .media-inco {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        float: right;
+
+        position: relative;
+        bottom: 29%;
+
+    }
+
+    .media-inco img {
+
+        height: 30px;
+        width: 30px;
+        background-color: coral;
+        padding: 8px;
+        border-bottom: 1px solid white;
+
+    }
+
+    .client-section {
+        display: flex;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .c-heading {
+        position: relative;
+
+        top: 55px;
+        color: rgba(241, 241, 247, 0.5);
+        font-size: 120px;
+        letter-spacing: 10px;
+    }
+
+    .client-sup-heading {
+        position: relative;
+        top: 65;
+        font-size: 50px;
+        display: inline-block;
+        margin-left: 8%;
+    }
+
+    .c-sup-heading {
+        align-items: center;
+        font-size: 50px;
+    }
+
+    .c-heading-para {
+
+        width: 60%;
+        font-size: 15px;
+        font-weight: bold;
+        color: gray;
+        margin: 15px;
+    }
+
+    .client-card-item {
+        display: flex;
+    }
+
+    .cc-item {
+        margin: 30px;
+    }
+
+    .client-card {
+        box-sizing: border-box;
+        border: 1px solid white;
+    }
+
+    .cc-container {
+        background-color: #fff;
+        width: 250px;
+        text-align: center;
+        padding: 15px;
+        color: gray;
+
+
+
+    }
+
+    .cc-heading {
+        margin-top: 25px;
+        color: #0a1229;
+    }
+
+    .cc-para {
+        margin: 15px;
+
+
+    }
+
+    .cc-logo {
+        background-color: #e47312;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: inline-block;
+        position: relative;
+        bottom: 230px;
+        margin-left: 110px;
+
+    }
+
+    .cc-logo-para {
+        font-size: 55px;
+        text-align: center;
+        color: #fff;
+
+    }
+
+    .blog {
+        display: flex;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .blog-item {
+        background-color: coral;
+        color: #fff;
+        margin: 10px;
+
+    }
+
+    .blog-item img {
+        width: 385px;
+        height: 255px;
+    }
+
+    .blog-content {
+        margin-left: 15px;
+    }
+
+    .blog-para {
+        margin: 20px auto;
+    }
+
+    .blog-link {
+        color: #fff;
+        margin: 10px auto;
+        text-decoration: none;
+    }
+
+    .blog-link:hover {
+        border-bottom: 2px solid #fff;
+    }
+
+    .blog-date {
+        width: 40px;
+        height: 60px;
+        position: relative;
+        background-color: #e47312;
+        display: inline-block;
+        color: #0a1229;
+        text-align: center;
+        bottom: 86.9%;
+        margin-left: 89.5%;
+        color: #f7f8fc;
+
+    }
+
+    .logo-card-container {
+        margin-left: 3%;
+
+    }
+
+    .logo-card {
+        background-color: coral;
+        display: flex;
+        width: 98%;
+        height: 180px;
+        margin-top: 50px auto;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        align-items: center;
+    }
+
+    .logo-card-heading {
+        color: #fff;
+        padding: 20px;
+
+    }
+
+    .logo-card img {
+        background-color: coral;
+        height: 50px;
+        width: 150px;
+        cursor: pointer;
+        padding: 20px;
+
+    }
+
+    footer {
+        padding: 20px auto;
+        background-color: #0a1229;
+        width: 90%;
+        display: flex;
+        margin: 0px auto;
+        flex-wrap: wrap;
+
+    }
+
+    .footer {
+        background-color: #0a1229;
+        color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .footer-item {
+        width: 33.33%;
+        margin: 50px auto;
+    }
+
+    .footer-item h1 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .footer-item h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .footer-item p {
+        font-size: 15px;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .footer-item a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+    }
+
+    .footer-item img {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+
+    .contect-item {
+        display: flex;
+    }
+
+    .contect-item h1 {
+        font-size: 15px
+    }
+
+    .contect-item p {
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .footer-logo {
+        background-color: #e47312;
+        padding: 35px;
+        position: relative;
+        right: 50%;
+    }
+
+    .footer-logo img {
+        background-color: #e47312;
+        height: 25px;
+        width: 90px;
+
+    }
+</style>
+
+<body>
+    <!-- <header>
+    </header> -->
+
+    <div class="nav-container">
+        <div class="image">
+
+            <div class="nav">
+                <div class="nav-logo">
+                    <img src="./image/logo-white.png" alt="">
+                </div>
+                <!-- <div class="nav-bar">
+                        <a href="">
+                            <div class="bar-line"></div>
+                            <div class="bar-line"></div>
+                        </a> -->
+
+                <div class="nav-list" id="list">
+                    <a href="#" class="nav-list-item">
+                        <div class="list"> HOME</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list">PROJECT</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list">ABOUT</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list">SERVICES</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list">BLOG</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list">PAGES</div>
+                    </a>
+                    <a href="#" class="nav-list-item">
+                        <div class="list list-button">GET FREE QUOTE</div>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- </div> -->
+            <div class="nav-disc">
+                <h1>YOU DREAM. WE CREATE</h1>
+                <P>We turn your ideas to reality, we don't stop until you're satisfied</P>
+                <span>GET FREE QUOTE</span>
+            </div>
+
+
+            <div class="nav-inco">
+                <a href="#" class="inco">
+                    <img src="./image/facebook-logo.png" alt="">
+                </a>
+                <a href="#" class="inco">
+                    <img src="./image/twitter-logo.png" alt="">
+                </a>
+                <a href="#" class="inco">
+                    <img src="./image/linkedin-logo.png" alt="">
+                </a>
+                <a href="#" class="inco">
+                    <img src="./image/instagram-logo.png" alt="">
+                </a>
+            </div>
+            <div class="info">
+                <div class="info-container">
+                    <img src="./image/phone.svg" alt="phone logo">
+                    <h4 class="info-type">PHONE NUMBER</h4>
+                    <P class="white-para">1-223-152-559</P>
+                    <P class="white-para">1-102-123-55</P>
+                </div>
+                <div class="info-container">
+                    <img src="./image/mail.svg" alt="maillogo">
+                    <h4 class="info-type">CONTACT</h4>
+                    <P class="white-para">comtact@nuuk.com</P>
+                    <p class="white-para">info@nuuk.com</p>
+
+                </div>
+                <div class="info-container">
+                    <img src="./image/clock.svg" alt="clock logo">
+                    <h4 class="info-type">OPENING TIMES</h4>
+                    <p class="white-para">Mon-sat 8:00 - 17:30, Sunday - Closed</p>
+                    <p class="white-para">FIND ON MAP</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <banner style="background-color:#fff;">
+        <div class="ba-item">
+            <div class="banner">
+                <h1 class="heading">SERVICES</h1>
+            </div>
+            <div class="banner-sup-heading">
+                <h2 class="sup-heading">OUR SPECIALZATION</h2>
+                <p class="heading-para">VIEW ALL SERVICES</p>
+            </div>
+        </div>
+        <div class="banner-container">
+            <div class="banner-dis">
+                <img src="./image/brickwall.svg" alt="brickwall" class="banner-img">
+                <h4 class="banner-heading">RENOVATION</h4>
+                <p class="banner-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolores corrupti
+                    optio suscipit </p>
+                <a href="#" class="ba-link">LEARN MORE</a>
+            </div>
+            <div>
+                <img src="./image/set-square.svg" alt="brickwall" class="banner-img">
+                <h4 class="banner-heading">ARCHITECTURE</h4>
+                <p class="banner-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolores corrupti
+                    optio suscipit </p>
+                <a href="#" class="ba-link">LEARN MORE</a>
+            </div>
+            <div>
+                <img src="./image/toolbox.svg" alt="brickwall" class="banner-img">
+                <h4 class="banner-heading">CONSTRUCTION</h4>
+                <p class="banner-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolores corrupti
+                    optio suscipit </p>
+                <a href="#" class="ba-link">LEARN MORE</a>
+            </div>
+            <div>
+                <img src="./image/paint-roller.svg" alt="brickwall" class="banner-img">
+                <h4 class="banner-heading">FINANCIAL RESULTS</h4>
+                <p class="banner-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus dolores corrupti
+                    optio suscipit </p>
+                <a href="#" class="ba-link">LEARN MORE</a>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="about-image">
+                <img src="./image/serv-1.jpg" alt="">
+
+            </div>
+            <div class="about-dis">
+                <h1 class="about-heading">ABOUT</h1>
+                <h2 class="sup-about">WHO WE ARE</h2>
+                <p class="about-para">Based on collective work and shared knowledge, Nuuk aims to favor dialogue and
+                    debate, to transform individual knowledge into increased creative potential.
+                </p>
+                <p class="about-para">Our studio is a architecture practice based in NY and Paris. Today, it includes
+                    150 architects, urban planners, landscape and interior designers of 25 different nationalities. The
+                    company principle of Architecture-Studio is the collective conception. From the very beginning, the
+                    practice has believed in the virtues of exchange, crossing ideas, common effort, shred knowledge.
+                </p>
+                <a class="about-link" href="#">MEET THE TEAM</a>
+            </div>
+
+        </div>
+
+        <div class="text">
+            <div class="text-container">
+                <h1 class="text-heading">170</h1>
+                <p class="text-para">Employer with over 10 years of experience</p>
+            </div>
+            <div class="text-container">
+                <h1 class="text-heading">10</h1>
+                <p class="text-para">Years experience in construction industries</p>
+            </div>
+            <div class="text-container">
+                <h1 class="text-heading">690</h1>
+                <p class="text-para">Residential premises completed in 2019</p>
+            </div>
+            <div class="text-container">
+                <h1 class="text-heading">7.1</h1>
+                <p class="text-para">Milion dollar value on investments</p>
+            </div>
+        </div>
+    </banner>
+
+    <section>
+        <div class="section">
+            <div class="ba-item">
+                <div class="banner">
+                    <h1 class="heading">PROJECT</h1>
+                </div>
+                <div class="banner-sup-heading">
+                    <h2 class="sup-heading">OUR WORK</h2>
+                    <p class="heading-para">VIEW ALL WORKS</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="./image/p-1.jpg" alt="">
+                    <p class="card-dis">VIEW PROJECT</p>
+                </div>
+                <div class="card-image">
+                    <img src="./image/p-4.jpg" alt="">
+                </div>
+                <div class="card-image">
+                    <img src="./image/p-3.jpg" alt="">
+                </div>
+                <div class="card-image">
+                    <img src="./image/p-2.jpg" alt="">
+                </div>
+                <div class="card-image">
+                    <img src="./image/p-5.jpg" alt="">
+                </div>
+                <div class="card-image">
+                    <img src="./image/p-6.jpg" alt="">
+                </div>
+            </div>
+            <div class="project-banner">
+                <h1 class="p-heading">LET'S MAKE SOMETHING GREAT TOGETHER</h1>
+                <p class="p-para">Get in touch with us and send some basic info for a quick quote.</p>
+                <a class="p-link" href="#">GET FREE QUOTE</a>
+            </div>
+
+            <div class="ba-item">
+                <div class="banner">
+                    <h1 class="heading">TEAM</h1>
+                </div>
+                <div class="banner-sup-heading">
+                    <h2 class="sup-heading">PROFESSIONALS</h2>
+                    <p class="heading-para">ABOUT US</p>
+                </div>
+            </div>
+            <div class="team">
+                <div class="t-item">
+                    <div class="t-container">
+                        <img src="./image/team-1.jpg" alt="team1">
+                        <h4 class="t-heading">PHILIP BROWER</h4>
+                        <p class="t-para">Managing Director</p>
+                    </div>
+                    <div class="media-inco">
+                        <img src="./image/facebook-logo.png" alt="">
+                        <img src="./image/twitter-logo.png" alt="">
+                        <img src="./image/linkedin-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="t-item">
+                    <div class="t-container">
+                        <img src="./image/team-2.jpg" alt="team1">
+                        <h4 class="t-heading">NAND GOPAL</h4>
+                        <p class="t-para">Managing Director</p>
+                    </div>
+                    <div class="media-inco">
+                        <img src="./image/facebook-logo.png" alt="">
+                        <img src="./image/twitter-logo.png" alt="">
+                        <img src="./image/linkedin-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="t-item">
+                    <div class="t-container">
+                        <img src="./image/team-3.jpg" alt="team1">
+                        <h4 class="t-heading">JAIN SINGH</h4>
+                        <p class="t-para">Managing Director</p>
+                    </div>
+                    <div class="media-inco">
+                        <img src="./image/facebook-logo.png" alt="">
+                        <img src="./image/twitter-logo.png" alt="">
+                        <img src="./image/linkedin-logo.png" alt="">
+                    </div>
+                </div>
+                <div class="t-item">
+                    <div class="t-container">
+                        <img src="./image/team-4.jpg" alt="team1">
+                        <h4 class="t-heading">SARA CONNOR</h4>
+                        <p class="t-para">Managing Director</p>
+                    </div>
+                    <div class="media-inco">
+                        <img src="./image/facebook-logo.png" alt="">
+                        <img src="./image/twitter-logo.png" alt="">
+                        <img src="./image/linkedin-logo.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="client-section">
+
+                <div class="c-item">
+                    <div class="client">
+                        <h1 class="c-heading">CLIENTS</h1>
+                    </div>
+                    <div class="client-sup-heading">
+                        <h2 class="c-sup-heading">TESTIMONIALS</h2>
+                        <p class="c-heading-para">Aenean ut eros et nisl sagittis vestibulum. Fusce neque. Praesent
+                            blandit
+                            laoreet nibh. Morbi mollis tellus ac sapien.</p>
+                        <p class="c-heading-para"> OUR SERVICES</p>
+                    </div>
+                </div>
+                <div class="client-card-item">
+                    <div style="margin-right: 10px;">
+                        <div class="client-card">
+                            <div class="cc-container">
+                                <h5 class="cc-heading">SARA WILLIAM</h5>
+                                <p class="cc-para">CEO at Webflow</p>
+                                <p>"Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                                    libero
+                                    vitae
+                                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet"</p>
+                            </div>
+                            <div class="cc-logo">
+                                <p class="cc-logo-para">"</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="client-card">
+                            <div class="cc-container">
+                                <h5 class="cc-heading">SARA WILLIAM</h5>
+                                <p class="cc-para">CEO at Webflow</p>
+                                <p>"Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                                    libero
+                                    vitae
+                                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet"</p>
+                            </div>
+                            <div class="cc-logo">
+                                <p class="cc-logo-para">"</p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cc-item">
+                        <div class="client-card">
+                            <div class="cc-container">
+                                <h5 class="cc-heading">SARA WILLIAM</h5>
+                                <p class="cc-para">CEO at Webflow</p>
+                                <p>"Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                                    libero
+                                    vitae
+                                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet"</p>
+                            </div>
+                            <div class="cc-logo">
+                                <p class="cc-logo-para">"</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="client-card">
+                            <div class="cc-container">
+                                <h5 class="cc-heading">SARA WILLIAM</h5>
+                                <p class="cc-para">CEO at Webflow</p>
+                                <p>"Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+                                    libero
+                                    vitae
+                                    erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet"</p>
+                            </div>
+                            <div class="cc-logo">
+                                <p class="cc-logo-para">"</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="ba-item">
+            <div class="banner">
+                <h1 class="heading">BLOG</h1>
+            </div>
+            <div class="banner-sup-heading">
+                <h2 class="sup-heading">LASTET NEWS</h2>
+                <p class="heading-para">VIEW BLOG</p>
+            </div>
+        </div>
+
+
+        <div class="blog">
+            <div class="blog-item">
+                <img src="./image/port-1.jpg" alt="port1">
+                <div class="blog-content">
+                    <h2 class="blog-heading">BLOGPOST1</h2>
+                    <p class="blog-para">Service and providing potential clients and custome with testimonials is one of
+                        the best ways to market</p>
+                    <a class="blog-link" href="#">READ MORE</a>
+                </div>
+                <div class="blog-date">
+                    <h3>11</h3>
+                    <p>NOV</p>
+                </div>
+            </div>
+
+
+
+            <div class="blog-item">
+                <img src="./image/port-2.jpg" alt="port2">
+                <div class="blog-content">
+                    <h2 class="blog-heading">BLOGPOST2</h2>
+                    <p class="blog-para">Service and providing potential clients and custome with testimonials is one of
+                        the best ways to market</p>
+                    <a class="blog-link" href="#">READ MORE</a>
+                </div>
+                <div class="blog-date">
+                    <h3>21</h3>
+                    <p>NOV</p>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="./image/port-3.jpg" alt="port3">
+                <div class="blog-content">
+                    <h2 class="blog-heading">BLOGPOST3</h2>
+                    <p class="blog-para">Service and providing potential clients and custome with testimonials is one of
+                        the best ways to market</p>
+                    <a class="blog-link" href="#">READ MORE</a>
+                </div>
+                <div class="blog-date">
+                    <h3>9</h3>
+                    <p>DEC</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="logo-card-container">
+            <div class="logo-card">
+                <h3 class="logo-card-heading">TRUSED BY TOP COMPANIES</h3>
+                <img src="./image/logo-1w.png" alt="logo1">
+                <img src="./image/logo-2w.png" alt="logo2">
+                <img src="./image/logo-3w.png" alt="logo3">
+                <img src="./image/logo-4w.png" alt="logo4">
+                <img src="./image/logo-5w.png" alt="logo5">
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="footer-item">
+                <h1>ABOUT NUUK</h1>
+                <p>Based on collective work and shared knowledge, Nuuk aims to favor dialogue and debate, to transform
+                    individual knowledge into increased creative potential.</p>
+                <a href="">FIND ON MAP</a>
+            </div>
+            <div class="footer-item">
+                <h1>SERVICES</h1>
+                <h3>FINALCIAL RESULT</h3>
+                <h3>CONSTRUCTION</h3>
+                <h3>ARCHITECTURE</h3>
+                <h3>RENOVATION</h3>
+            </div>
+            <div class="footer-item ">
+                <h1>CONTECT US</h1>
+                <div class="contect-item">
+                    <div>
+                        <img src="./image/phone.svg" alt="">
+                    </div>
+                    <div>
+                        <h1>PHONE NUMBER</h1>
+                        <p>1-800-506-266</p>
+                    </div>
+                </div>
+                <div class="contect-item">
+                    <div>
+                        <img src="./image/clock.svg" alt="">
+                    </div>
+
+
+                    <div>
+                        <h1>OPENING TIMES</h1>
+                        <p>MON - Sat 8:00-17:30, Sunday - Closed</p>
+                    </div>
+                </div>
+                <div class="contect-item">
+
+                    <div>
+                        <img src="./image/mail.svg" alt="">
+                    </div>
+                    <div>
+                        <h1>CONTACT</h1>
+                        <p>contact@nuuk.com</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="./image/logo-white.png" alt=" ">
+            </div>
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
